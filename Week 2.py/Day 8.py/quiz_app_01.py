@@ -123,7 +123,7 @@ def run_quiz():
     print(f"Name: {name}")
     print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print(f"Score: {score}/5")
-    print(f"Percentage: {percentage:.1f}")
+    print(f"Percentage: {percentage:.1f}%")
     print(f"Grade: {grade}")
 
     # Save result
