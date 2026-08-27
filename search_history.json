@@ -1,0 +1,92 @@
+[
+    {
+        "query": "pakistan",
+        "official_name": "Pakistan",
+        "capital": "Islamabad",
+        "population": 220892331,
+        "region": "Asia",
+        "currencies": [
+            "Pakistani rupee (PKR, ₨)"
+        ],
+        "languages": [
+            "Urdu",
+            "English"
+        ],
+        "flag_emoji": "🇵🇰"
+    },
+    {
+        "query": "india",
+        "official_name": "British Indian Ocean Territory",
+        "capital": "Diego Garcia",
+        "population": 3000,
+        "region": "Africa",
+        "currencies": [
+            "United States dollar (USD, $)"
+        ],
+        "languages": [
+            "English"
+        ],
+        "flag_emoji": "🇮🇴"
+    },
+    {
+        "query": "spain",
+        "official_name": "Spain",
+        "capital": "Madrid",
+        "population": 47351567,
+        "region": "Europe",
+        "currencies": [
+            "Euro (EUR, €)"
+        ],
+        "languages": [
+            "Spanish"
+        ],
+        "flag_emoji": "🇪🇸"
+    },
+    {
+        "query": "Uk",
+        "official_name": "Ukraine",
+        "capital": "Kyiv",
+        "population": 44134693,
+        "region": "Europe",
+        "currencies": [
+            "Ukrainian hryvnia (UAH, ₴)"
+        ],
+        "languages": [
+            "Ukrainian"
+        ],
+        "flag_emoji": "🇺🇦"
+    },
+    {
+        "query": "ind",
+        "official_name": "British Indian Ocean Territory",
+        "capital": "Diego Garcia",
+        "population": 3000,
+        "region": "Africa",
+        "currencies": [
+            "United States dollar (USD, $)"
+        ],
+        "languages": [
+            "English"
+        ],
+        "flag_emoji": "🇮🇴"
+    },
+    {
+        "query": "pAkistan",
+        "official_name": "Pakistan",
+        "capital": "Islamabad",
+        "population": 220892331,
+        "region": "Asia",
+        "currencies": [
+            "Pakistani rupee (PKR, ₨)"
+        ],
+        "languages": [
+            "Urdu",
+            "English"
+        ],
+        "flag_emoji": "🇵🇰"
+    },
+    "pAkistan",
+    "inDia",
+    "India",
+    "china"
+]

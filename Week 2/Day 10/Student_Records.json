@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Akasha",
+        "score": 97,
+        "grade": "A+",
+        "city": "Lahore",
+        "pass": "Passed",
+        "failed": "Null"
+    },
+    {
+        "name": "Ali",
+        "score": 73,
+        "grade": "C",
+        "city": "Islamabad",
+        "pass": "Passed",
+        "failed": "Null"
+    },
+    {
+        "name": "Ahmad",
+        "score": 80,
+        "grade": "B",
+        "city": "Karachi",
+        "pass": "Passed",
+        "failed": "Null"
+    },
+    {
+        "name": "Minha",
+        "score": 90,
+        "grade": "A",
+        "city": "Multan",
+        "pass": "Passed",
+        "failed": "Null"
+    },
+    {
+        "name": "Bisma",
+        "score": 44,
+        "grade": "F",
+        "city": "Peshawar",
+        "pass": "Null",
+        "failed": "Failed"
+    }
+]

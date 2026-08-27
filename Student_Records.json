@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Akasha",
+        "score": 97,
+        "grade": "A+",
+        "city": "Lahore",
+        "Pass": "Pass",
+        "failed": "-"
+    },
+    {
+        "name": "Ali",
+        "score": 73,
+        "grade": "C",
+        "city": "Islamabad",
+        "Pass": "Pass",
+        "failed": "-"
+    },
+    {
+        "name": "Ahmad",
+        "score": 80,
+        "grade": "B",
+        "city": "Karachi",
+        "Pass": "Pass",
+        "failed": "-"
+    },
+    {
+        "name": "Minha",
+        "score": 90,
+        "grade": "A",
+        "city": "Multan",
+        "Pass": "Pass",
+        "failed": "-"
+    },
+    {
+        "name": "Bisma",
+        "score": 44,
+        "grade": "F",
+        "city": "Peshawar",
+        "Pass": "-",
+        "failed": "Fail"
+    },
+    {
+        "name": "Abdullah",
+        "score": 88,
+        "grade": "B+",
+        "city": "Lahore",
+        "Pass": "Pass",
+        "failed": "-"
+    },
+    {
+        "name": "Anas",
+        "score": 44,
+        "grade": "F",
+        "city": "Karachi",
+        "Pass": "-",
+        "failed": "Fail"
+    },
+    {
+        "name": "Uzair",
+        "score": 77,
+        "grade": "C",
+        "city": "Lahore",
+        "Pass": "Pass",
+        "failed": "-"
+    },
+    {
+        "name": "Naveed",
+        "score": 92,
+        "grade": "A",
+        "city": "Lahore",
+        "Pass": "Pass",
+        "failed": "-"
+    },
+    {
+        "name": "Adeel",
+        "score": 50,
+        "grade": "E",
+        "city": "RWP",
+        "Pass": "Pass",
+        "failed": "-"
+    }
+]
