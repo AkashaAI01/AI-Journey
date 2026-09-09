@@ -2,7 +2,6 @@ import requests
 import json
 import os
 
-
 # ============================================================
 #              COUNTRY INFORMATION CLI APP
 # ============================================================
@@ -592,7 +591,7 @@ def main():
             )
 
             print(
-                "Goodbye! 🚪"
+                "   Goodbye!"
             )
 
             print("=" * 60)

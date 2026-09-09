@@ -1,14 +1,12 @@
 import requests
 
+from colorama import Fore, Back, Style, init
 
-# ============================================
+init()
+
 # Get latitude and longitude of a city
-# ============================================
-
 def get_coordinates(city):
-
     geocoding_url = "https://geocoding-api.open-meteo.com/v1/search"
-
     params = {
         "name": city,
         "count": 1,
@@ -22,39 +20,27 @@ def get_coordinates(city):
         timeout=10
     )
 
-    response.raise_for_status()
-
-    data = response.json()
-
-    if "results" not in data:
+    Data = response.json()
+    if "results" not in Data:
         return None
 
-    location = data["results"][0]
+    location = Data["results"][0]
 
-    return (
+    return(
         location["latitude"],
         location["longitude"],
         location["name"],
         location.get("country", "Unknown")
     )
 
-
-# ============================================
-# Get weather forecast
-# ============================================
-
+# Get weather forcast by creating a function
 def get_weather(latitude, longitude):
-
     weather_url = "https://api.open-meteo.com/v1/forecast"
-
     params = {
         "latitude": latitude,
         "longitude": longitude,
-
         "current": "temperature_2m,relative_humidity_2m,wind_speed_10m",
-
         "daily": "temperature_2m_max,temperature_2m_min,weather_code",
-
         "timezone": "auto"
     }
 
@@ -65,100 +51,73 @@ def get_weather(latitude, longitude):
     )
 
     response.raise_for_status()
-
     return response.json()
 
-
-# ============================================
-# Main Program
-# ============================================
-
+# Main program
 while True:
+    city = input("\n\n Enter a city name (or 'quit' to exit): ").strip()
 
-    city = input("\nEnter city name (or 'quit' to exit): ").strip()
-
-    # Quit program
     if city.lower() == "quit":
-        print("👋 Weather App closed. Goodbye!")
+        print(Fore.CYAN + "\n Wheather app closed.")
+        print("     Good bye!" + Style.RESET_ALL)
         break
 
-    # Empty input
     if not city:
-        print("❌ Please enter a city name.")
+        print(Fore.YELLOW + "❌ Please Enter a city name" + Style.RESET_ALL)
         continue
 
     try:
-
-        # Get coordinates
         location = get_coordinates(city)
 
         if location is None:
-            print(f"❌ City '{city}' was not found.")
+            print(Fore.LIGHTMAGENTA_EX + f"\n  City {city} is not found." + Style.RESET_ALL)
+            print("   Please try again")
             continue
 
         latitude, longitude, city_name, country = location
+        print(f"   📍 City    : {city_name}")
+        print(f"   🌍 Country : {country}")
 
-        # Get weather
-        data = get_weather(latitude, longitude)
+        Data = get_weather(latitude, longitude)
 
-        current = data["current"]
-        daily = data["daily"]
+        current = Data["current"]
+        daily = Data["daily"]
 
+        # Show current weather
+        print(Fore.RED + "=" * 40)
+        print(Fore.CYAN + "         🌤 WEATHER INFORMATION ")
+        print(Fore.RED + "=" * 40)
 
-        # ====================================
-        # Current Weather
-        # ====================================
+        print(Fore.YELLOW + f"\n         Current weather of {city}" + Style.RESET_ALL)
+        print(f"         Temperature : {current['temperature_2m']}°C")
+        print(f"         Humidity    : {current['relative_humidity_2m']}%")
+        print(f"         Wind Speed  : {current['wind_speed_10m']}km/h")
+        print(f"         Time        : {current['time']}")
 
-        print("\n===================================")
-        print("       🌤️ WEATHER INFORMATION")
-        print("===================================")
-
-        print(f"City        : {city_name}")
-        print(f"Country     : {country}")
-
-        print("\n--- Current Weather ---")
-
-        print(f"Temperature : {current['temperature_2m']}°C")
-        print(f"Humidity    : {current['relative_humidity_2m']}%")
-        print(f"Wind Speed  : {current['wind_speed_10m']} km/h")
-        print(f"Time        : {current['time']}")
-
-
-        # ====================================
-        # 7 Day Forecast
-        # ====================================
-
-        print("\n--- 7 Day Forecast ---")
+        # 7 days forecast
+        print(Fore.YELLOW + f"\n\n                  7 days forcast of {city}" + Style.RESET_ALL)
 
         for i in range(len(daily["time"])):
 
             date = daily["time"][i]
-
             max_temp = daily["temperature_2m_max"][i]
             min_temp = daily["temperature_2m_min"][i]
-
             weather_code = daily["weather_code"][i]
 
-            print(
-                f"{date} | "
-                f"Min: {min_temp}°C | "
-                f"Max: {max_temp}°C | "
-                f"Weather Code: {weather_code}"
+            print(f"\n {date} | "
+                f"Max Temperature : {max_temp}°C | "
+                f"Min Temperature : {min_temp}°C | "
+                f"Weather Code : {weather_code}"
             )
 
-
     except requests.exceptions.ConnectionError:
-
-        print("❌ No internet connection.")
+        print(Fore.RED + "\n Error: No internet connection." + Style.RESET_ALL)
 
     except requests.exceptions.Timeout:
-
-        print("❌ Request timed out. Please try again.")
+        print(Fore.RED + "\n Error: Requested timeout. Please try again...." + Style.RESET_ALL)
 
     except requests.exceptions.RequestException as e:
-
-        print(f"❌ API Error: {e}")
+        print(Fore.RED + f"\n API Error: {e}" + Style.RESET_ALL)
 
     except (KeyError, IndexError):
-
-        print("❌ Unexpected data received from API.")
+        print(Fore.RED + "\n Error: Unexpacted data recieved from API." + Style.RESET_ALL)
