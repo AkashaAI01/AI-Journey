@@ -83,7 +83,7 @@ while True:
         current = Data["current"]
         daily = Data["daily"]
 
-        # Show current weather
+        # Show current weather 
         print(Fore.RED + "=" * 40)
         print(Fore.CYAN + "         🌤 WEATHER INFORMATION ")
         print(Fore.RED + "=" * 40)

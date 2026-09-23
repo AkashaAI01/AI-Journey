@@ -1,0 +1,58 @@
+[
+  {
+    "city": "Lahore, PK",
+    "temp": "34.99°C",
+    "description": "Clear Sky",
+    "humidity": "46%",
+    "wind": "2.57 m/s",
+    "searched_at": "2026-09-21 14:19"
+  },
+  {
+    "city": "Murree, PK",
+    "temp": "25.59°C",
+    "description": "Clear Sky",
+    "humidity": "47%",
+    "wind": "2.84 m/s",
+    "searched_at": "2026-09-21 14:19"
+  },
+  {
+    "city": "Karachi, PK",
+    "temp": "39.9°C",
+    "description": "Clear Sky",
+    "humidity": "25%",
+    "wind": "6.69 m/s",
+    "searched_at": "2026-09-21 14:22"
+  },
+  {
+    "city": "Paris, FR",
+    "temp": "19.36°C",
+    "description": "Overcast Clouds",
+    "humidity": "59%",
+    "wind": "2.57 m/s",
+    "searched_at": "2026-09-21 14:33"
+  },
+  {
+    "city": "Lahore, PK",
+    "temp": "34.99°C",
+    "description": "Clear Sky",
+    "humidity": "46%",
+    "wind": "2.57 m/s",
+    "searched_at": "2026-09-21 14:38"
+  },
+  {
+    "city": "Hafizabad, PK",
+    "temp": "36.14°C",
+    "description": "Clear Sky",
+    "humidity": "27%",
+    "wind": "3.37 m/s",
+    "searched_at": "2026-09-21 14:39"
+  },
+  {
+    "city": "Lahore, PK",
+    "temp": "34.99°C",
+    "description": "Clear Sky",
+    "humidity": "46%",
+    "wind": "2.06 m/s",
+    "searched_at": "2026-09-21 14:40"
+  }
+]
